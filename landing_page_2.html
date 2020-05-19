@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Landing Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+</head>
+
+<body>
+    <!--Navigation Pane-->
+
+    <div id="navigation">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark" id="large-navbar">
+            <div class="container">
+                <!-- Brand -->
+                <div class="navbar-header">
+                    <a class="navbar-brand ml-2 pl-4 pr-4 align-self-center" href="landing_page_2.html"><b>Latitude</b></a>
+                </div>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <!-- Links -->
+                    <div class="navbar-collapse collapse bg-dark" id="collapsibleNavbar">
+                        <ul class="nav navbar-nav ml-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="comparisons.html">Comparison</a>
+                            
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                            
+                          </li>
+                            <!-- Dropdown -->
+                        
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true">Plots</a>
+                            
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="temp.html">Max Temperature</a>
+                                <a class="dropdown-item" href="humidity.html">Humidity</a>
+                                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                                <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+                            </div>
+                          </li>
+                      </ul>
+                  </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    
+    <!-- Body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-8">
+                <br>
+                <!-- Summary Card-->
+                <div class="card">
+                    <div class="card-header" id='ch1'>
+                        <h2 class="text-center"><b>
+                                <p>Summary: Latitude vs. X </p>
+                            </b></h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="image-wrapper float-left">
+                            <img class="img-fluid" src="./Resources/assets/images/lat_vs_temp.png" alt="lat_vs_temp" width="350"
+                                height="250" />
+                        </div>
+                        <p>The purpose of this project was to analyze how weather changes as you get closer to the
+                            equator.
+                            We used citipy to generate a random list of longitude and latitudes and selected cities
+                            closest to those coordinates.
+                            Then, using OpenWeather API, we created a dataset for over 500 cities.</p>
+                        <p>We then, used factors including cloudiness, windspeed, temperature, and humidity, we used
+                            Matplotlib to compare each city's latitude and one of those factors.
+                            This site displays the data and visualizations created as part off that analysis.
+                            Descriptions are included. </p>
+                    </div>
+                </div>
+            </div>
+                <!--Right Card-->
+            <div class="col-sm-12 col-lg-4">
+                <br>
+                <!-- Visualizations Card-->
+                <div class="card">
+                    <div class="card-header" id='ch2'>
+                        <h2 class="text-center">
+                            <p><b>Visualizations</b></p>
+                        </h2>
+                    </div>
+                    <div class="card-body" id='cb2'>
+                      <h3 class="text-center"></h3>
+                      <div class ="clearfix">
+                        <figure class="figure">
+                          <figcaption class="figure-caption text-center">Max Temp</figcaption>
+                          <a href="temp.html">
+                            <img src="./Resources/assets/images/lat_vs_temp.png"  alt="lat_vs_temp"  width="150" height="110" id="v_temp"/>
+                          </a>
+                        </figure>
+                        <figure class="figure">
+                          <figcaption class="figure-caption text-center">Humidity</figcaption>
+                          <a href="humidity.html">
+                            <img src="./Resources/assets/images/lat_vs_humidity.png"  alt="lat_vs_humidity" width="150" height="110" id="v_humid"/>
+                          </a> 
+                        </figure>
+                        <figure class="figure">
+                          <figcaption class="figure-caption text-center">Wind Speed</figcaption>
+                          <a href="wind_speed.html">
+                            <img src="./Resources/assets/images/lat_vs_wind_speed.png" alt="lat_vs_windspeed"  width="150" height="110" id="v_wind"/>
+                          </a>
+                        </figure>
+                        <figure class="figure">
+                          <figcaption  class="figure-caption text-center">Cloudiness</figcaption>
+                          <a href="cloudiness.html">
+                            <img  src="./Resources/assets/images/lat_vs_cloudiness.png" alt="lat_vs_cloudiness"  width="150" height="110" id="v_cloud"/>
+                          </a>
+                        </figure>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- footer -->
+    <footer class="footer" id="pageFooter">
+        <div class="container">
+          <span class="text-center text-muted ">Claudia Trahan Web Project 2020</span>
+        </div>
+      </footer>
+
+</body>
+
+</html>
